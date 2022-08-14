@@ -14,6 +14,10 @@
 		54CB768F28A894D800BF9788 /* RLockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CB768E28A894D800BF9788 /* RLockerTests.swift */; };
 		54CB769928A894D800BF9788 /* RLockerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CB769828A894D800BF9788 /* RLockerUITests.swift */; };
 		54CB769B28A894D800BF9788 /* RLockerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CB769A28A894D800BF9788 /* RLockerUITestsLaunchTests.swift */; };
+		54CB76AA28A89B4800BF9788 /* Locker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CB76A928A89B4800BF9788 /* Locker.swift */; };
+		54CB76AD28A89E7100BF9788 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 54CB76AC28A89E7100BF9788 /* Logging */; };
+		54CB76B028A8A00D00BF9788 /* XCGLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 54CB76AF28A8A00D00BF9788 /* XCGLogger */; };
+		54CB76B228A8A69D00BF9788 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CB76B128A8A69D00BF9788 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,9 @@
 		54CB769428A894D800BF9788 /* RLockerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RLockerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CB769828A894D800BF9788 /* RLockerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLockerUITests.swift; sourceTree = "<group>"; };
 		54CB769A28A894D800BF9788 /* RLockerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLockerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		54CB76A928A89B4800BF9788 /* Locker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locker.swift; sourceTree = "<group>"; };
+		54CB76B128A8A69D00BF9788 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54CB76B328A8ABFC00BF9788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CB76AD28A89E7100BF9788 /* Logging in Frameworks */,
+				54CB76B028A8A00D00BF9788 /* XCGLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +104,14 @@
 		54CB767B28A894D700BF9788 /* RLocker */ = {
 			isa = PBXGroup;
 			children = (
+				54CB76B128A8A69D00BF9788 /* AppDelegate.swift */,
+				54CB76B328A8ABFC00BF9788 /* Info.plist */,
 				54CB767C28A894D700BF9788 /* RLockerApp.swift */,
 				54CB767E28A894D700BF9788 /* ContentView.swift */,
 				54CB768028A894D800BF9788 /* Assets.xcassets */,
 				54CB768528A894D800BF9788 /* RLocker.entitlements */,
 				54CB768228A894D800BF9788 /* Preview Content */,
+				54CB76A928A89B4800BF9788 /* Locker.swift */,
 			);
 			path = RLocker;
 			sourceTree = "<group>";
@@ -145,6 +157,10 @@
 			dependencies = (
 			);
 			name = RLocker;
+			packageProductDependencies = (
+				54CB76AC28A89E7100BF9788 /* Logging */,
+				54CB76AF28A8A00D00BF9788 /* XCGLogger */,
+			);
 			productName = RLocker;
 			productReference = 54CB767928A894D700BF9788 /* RLocker.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +233,10 @@
 				Base,
 			);
 			mainGroup = 54CB767028A894D700BF9788;
+			packageReferences = (
+				54CB76AB28A89E7100BF9788 /* XCRemoteSwiftPackageReference "swift-log" */,
+				54CB76AE28A8A00D00BF9788 /* XCRemoteSwiftPackageReference "XCGLogger" */,
+			);
 			productRefGroup = 54CB767A28A894D700BF9788 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +281,8 @@
 			files = (
 				54CB767F28A894D700BF9788 /* ContentView.swift in Sources */,
 				54CB767D28A894D700BF9788 /* RLockerApp.swift in Sources */,
+				54CB76B228A8A69D00BF9788 /* AppDelegate.swift in Sources */,
+				54CB76AA28A89B4800BF9788 /* Locker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +444,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RLocker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RLocker/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,6 +470,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RLocker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RLocker/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,6 +592,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54CB76AB28A89E7100BF9788 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		54CB76AE28A8A00D00BF9788 /* XCRemoteSwiftPackageReference "XCGLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DaveWoodCom/XCGLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54CB76AC28A89E7100BF9788 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54CB76AB28A89E7100BF9788 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		54CB76AF28A8A00D00BF9788 /* XCGLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54CB76AE28A8A00D00BF9788 /* XCRemoteSwiftPackageReference "XCGLogger" */;
+			productName = XCGLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 54CB767128A894D700BF9788 /* Project object */;
 }
